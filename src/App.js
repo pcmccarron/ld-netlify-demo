@@ -8,7 +8,7 @@ import Adbanner from "./components/adbanner";
 
 function App() {
   const { login, bgstyle, qrcode, apidebug } = useFlags();
-  const [bg, setbg] = React.useState();
+  const [bg, setbg] = React.useState('./ld-bg.png');
   const client = useLDClient()
 
   useEffect(() => {
@@ -56,7 +56,7 @@ function App() {
         <div className="body grid mx-auto row-start-4 xl:col-span-1 xl:col-start-4 xl:row-start-1 bg-black-4 place-content-center">
           <QRCode />
         </div>
-      ) : null}s
+      ) : null}
     </div>
   );
 }
