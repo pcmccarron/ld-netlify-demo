@@ -9,6 +9,7 @@ import reportWebVitals from './reportWebVitals';
 
 let id = getUserId();
 
+
 (async () => {
   const LDProvider = await asyncWithLDProvider({
     clientSideID: '6367547e32b49211862ee919',
