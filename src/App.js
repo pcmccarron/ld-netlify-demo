@@ -9,7 +9,6 @@ import Adbanner from "./components/adbanner";
 function App() {
   const { login, bgstyle, qrcode, apidebug } = useFlags();
   const [bg, setbg] = React.useState('./ld-bg.png');
-  const client = useLDClient()
 
   useEffect(() => {
     console.log("update to bg detected");
