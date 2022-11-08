@@ -1,0 +1,5 @@
+projects:
+    - key: ld-netlify-demo
+      dir: src
+      aliases:
+        - type: camelcase
