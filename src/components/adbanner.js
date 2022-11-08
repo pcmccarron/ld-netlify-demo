@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 export default function Adbanner() {
   const { adbanner } = useFlags()
-  const [academyText, setAcademyText] = useState("Have you explored")
+  const [ academyText, setAcademyText ] = useState("Have you explored")
 
   const client = useLDClient()
 
@@ -13,7 +13,7 @@ export default function Adbanner() {
     setText()
     console.log("sending client tracking to LD Experiment for CTA")
     client.track('academy-clickthrough');
-  }, [adbanner])
+  }, [adbanner, academyText])
 
   function setText() {
     setAcademyText(adbanner)
