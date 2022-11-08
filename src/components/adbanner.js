@@ -5,25 +5,25 @@ import { useState, useEffect } from "react";
 
 export default function Adbanner() {
   const { adbanner } = useFlags()
-  const {maincss, setMainCSS } = useState('text-ld-white')
-  
+  const { maincss, setMainCSS } = useState('text-ld-white')
+
   const client = useLDClient()
 
   useEffect(() => {
     try {
-    console.log("Configure...")
-    console.log(adbanner)
-    if (adbanner === 'v1') {
-      setMainCSS('bg-ldred text-white')
-    } else if (adbanner === 'v2'){
-      setMainCSS('bg-ldblue text-white')
-    } else {
-      setMainCSS('text-ldwhite')
+      console.log("Configure...")
+      console.log(adbanner)
+      if (adbanner === 'v1') {
+        setMainCSS('bg-ldred text-white')
+      } else if (adbanner === 'v2') {
+        setMainCSS('bg-ldblue text-white')
+      } else {
+        setMainCSS('text-ldwhite')
+      }
     }
-  }
-  catch(err) {
-    console.log(err)
-  }
+    catch (err) {
+      console.log(err)
+    }
     console.log(maincss)
     console.log("sending client tracking to LD Experiment for CTA")
     client.track('academy-clickthrough');
@@ -46,9 +46,7 @@ export default function Adbanner() {
           target="_blank"
           className={`text-ldyellow`}
           onClick={handleClick.bind()}
-        >
-           LaunchDarkly Academy
-        </a>?
+        >&nbsp LaunchDarkly Academy</a>?
       </span>
     </div>
   );
