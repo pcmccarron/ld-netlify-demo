@@ -15,8 +15,8 @@ export default function Adbanner() {
     client.track('academy-clickthrough');
   }, [adbanner])
 
-  function setCSS() {
-    setMainCSS(adbanner)
+  async function setCSS() {
+    await setMainCSS(adbanner)
     console.log(maincss)
     return maincss
   }
