@@ -12,7 +12,6 @@ export default function Adbanner() {
   useEffect(() => {
     try {
       console.log("Configure...")
-      console.log(adbanner)
       if (adbanner === 'v1') {
         setMainCSS('bg-ldred text-white')
       } else if (adbanner === 'v2') {
@@ -40,7 +39,7 @@ export default function Adbanner() {
       role="alert"
     >
       <span className="font-sohne mr-2 ml-2 text-left flex-auto">
-        Have you explored our new
+        Have you explored
         <a class="cta"
           href="https://academy.launchdarkly.com"
           target="_blank"
