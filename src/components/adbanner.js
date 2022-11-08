@@ -11,6 +11,7 @@ export default function Adbanner() {
 
   useEffect(() => {
     console.log("Configure...")
+    console.log(adbanner)
     if (adbanner === 'v1') {
       setMainCSS('bg-ldred text-white')
     } else if (adbanner === 'v2'){
