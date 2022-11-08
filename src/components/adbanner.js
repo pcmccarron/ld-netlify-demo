@@ -11,13 +11,13 @@ export default function Adbanner() {
 
   useEffect(() => {
     console.log("Configure...")
-    // if (adbanner == 'v1'){
-    //   setMainCSS('bg-ldred text-white')
-    // } else if (adbanner == 'v2'){
-    //   setMainCSS('bg-ldblue text-white')
-    // } else {
-    //   setMainCSS('text-ldwhite')
-    // }
+    if (adbanner === 'v1') {
+      setMainCSS('bg-ldred text-white')
+    } else if (adbanner === 'v2'){
+      setMainCSS('bg-ldblue text-white')
+    } else {
+      setMainCSS('text-ldwhite')
+    }
     console.log(maincss)
     console.log("sending client tracking to LD Experiment for CTA")
     client.track('academy-clickthrough');
@@ -41,7 +41,7 @@ export default function Adbanner() {
           className={`text-ldyellow`}
           onClick={handleClick.bind()}
         >
-          LaunchDarkly Academy
+           LaunchDarkly Academy
         </a>?
       </span>
     </div>
