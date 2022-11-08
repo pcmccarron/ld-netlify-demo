@@ -16,9 +16,9 @@ export default function Adbanner() {
   }, [adbanner])
 
   function setText() {
-    setMainCSS(adbanner)
-    console.log(maincss)
-    return maincss
+    setAcademyText(adbanner)
+    console.log(academyText)
+    return academyText
   }
 
   function handleClick() {
