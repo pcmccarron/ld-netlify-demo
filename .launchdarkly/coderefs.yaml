@@ -1,5 +1,0 @@
-projects:
-    - key: ld-netlify-workshop
-      dir: src
-      aliases:
-        - type: camelcase
