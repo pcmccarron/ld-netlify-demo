@@ -5,16 +5,20 @@ import { useState, useEffect } from "react";
 
 export default function Adbanner() {
   const { adbanner } = useFlags()
-  const [cta, setCTA] = useState("Check out")
-  const [academy, setacademy] = useState("LaunchDarkly Academy")
-  const [maincss, setmaincss] = useState("text-white")
-
+  const {maincss, setMainCSS } = useState('text-ld-white')
+  
   const client = useLDClient()
 
   useEffect(() => {
     console.log("Configure...")
-    setCTA(adbanner['cta'])
-    setmaincss(adbanner['maincss'])
+    if (adbanner == 'v1'){
+      setMainCSS('bg-ldred text-white')
+    } else if (adbanner == 'v2'){
+      setMainCSS('bg-ldblue text-white')
+    } else {
+      setMainCSS('text-ldwhite')
+    }
+    console.log(maincss)
     console.log("sending client tracking to LD Experiment for CTA")
     client.track('academy-clickthrough');
   }, [adbanner])
@@ -30,15 +34,15 @@ export default function Adbanner() {
       role="alert"
     >
       <span className="font-sohne mr-2 ml-2 text-left flex-auto">
-        {cta}
+        Have you explored our new
         <a class="cta"
           href="https://academy.launchdarkly.com"
           target="_blank"
           className={`text-ldyellow`}
           onClick={handleClick.bind()}
         >
-          {academy}
-        </a>
+          LaunchDarkly Academy
+        </a>?
       </span>
     </div>
   );
