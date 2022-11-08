@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 export default function Adbanner() {
   const { adbanner } = useFlags()
-  const {maincss, setMainCSS} = useState()
+  const [maincss, setMainCSS] = useState()
 
   const client = useLDClient()
 
