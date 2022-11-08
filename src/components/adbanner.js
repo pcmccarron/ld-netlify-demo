@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 export default function Adbanner() {
   const { adbanner } = useFlags()
-  const [academyText, setAcademyText] = useState()
+  const [academyText, setAcademyText] = useState("Have you explored")
 
   const client = useLDClient()
 
