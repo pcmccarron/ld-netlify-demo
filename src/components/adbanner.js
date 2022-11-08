@@ -28,11 +28,11 @@ export default function Adbanner() {
 
   return (
     <div
-      className={`p-2 ${maincss} items-center leading-none lg:rounded-full flex lg:inline-flex`}
+      className={`p-2 bg-ldblue items-center leading-none lg:rounded-full flex lg:inline-flex`}
       role="alert"
     >
       <span className="font-sohne mr-2 ml-2 text-left flex-auto">
-        Have you explored
+        {maincss}
         <a class="cta"
           href="https://academy.launchdarkly.com"
           target="_blank"
