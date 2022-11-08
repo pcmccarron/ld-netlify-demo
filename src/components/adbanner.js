@@ -5,20 +5,20 @@ import { useState, useEffect } from "react";
 
 export default function Adbanner() {
   const { adbanner } = useFlags()
-  const { maincss, setMainCSS } = useState('text-ld-white')
+  const { maincss, setMainCSS } = useState("text-ld-white")
 
   const client = useLDClient()
 
   function handleAdbanner() {
     if (adbanner === 'v1') {
       console.log("eval1")
-      setMainCSS('bg-ldred text-white')
+      setMainCSS("bg-ldred text-white")
     } else if (adbanner === 'v2') {
       console.log("eval2")
-      setMainCSS('bg-ldblue text-white')
+      setMainCSS("bg-ldblue text-white")
     } else {
       console.log("eval3")
-      setMainCSS('text-ldwhite')
+      setMainCSS("text-ldwhite")
     }
   }
 
