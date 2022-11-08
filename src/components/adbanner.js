@@ -9,20 +9,18 @@ export default function Adbanner() {
 
   const client = useLDClient()
 
+  async function handleAdbanner() {
+    if (adbanner === 'v1') {
+      await setMainCSS('bg-ldred text-white')
+    } else if (adbanner === 'v2') {
+      await setMainCSS('bg-ldblue text-white')
+    } else {
+      await setMainCSS('text-ldwhite')
+    }
+  }
+
   useEffect(() => {
-    try {
-      console.log("Configure...")
-      if (adbanner === 'v1') {
-        setMainCSS('bg-ldred text-white')
-      } else if (adbanner === 'v2') {
-        setMainCSS('bg-ldblue text-white')
-      } else {
-        setMainCSS('text-ldwhite')
-      }
-    }
-    catch (err) {
-      console.log(err)
-    }
+    handleAdbanner()
     console.log(maincss)
     console.log("sending client tracking to LD Experiment for CTA")
     client.track('academy-clickthrough');
