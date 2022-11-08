@@ -9,13 +9,16 @@ export default function Adbanner() {
 
   const client = useLDClient()
 
-  async function handleAdbanner() {
+  function handleAdbanner() {
     if (adbanner === 'v1') {
-      await setMainCSS('bg-ldred text-white')
+      console.log("eval1")
+      setMainCSS('bg-ldred text-white')
     } else if (adbanner === 'v2') {
-      await setMainCSS('bg-ldblue text-white')
+      console.log("eval2")
+      setMainCSS('bg-ldblue text-white')
     } else {
-      await setMainCSS('text-ldwhite')
+      console.log("eval3")
+      setMainCSS('text-ldwhite')
     }
   }
 
