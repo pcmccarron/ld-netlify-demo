@@ -12,7 +12,7 @@ let id = getUserId();
 
 (async () => {
   const LDProvider = await asyncWithLDProvider({
-    clientSideID: '6368836a8ea04411859bca37',
+    clientSideID: '636be4b76fb4b61172441197',
     user: {
       key: id,
       custom: {
@@ -23,13 +23,13 @@ let id = getUserId();
   }
   );
 
-ReactDOM.render(
-  <LDProvider>
-    <App />
-  </LDProvider>,
+  ReactDOM.render(
+    <LDProvider>
+      <App />
+    </LDProvider>,
 
-  document.getElementById('root')
-);
+    document.getElementById('root')
+  );
 })();
 
 // If you want to start measuring performance in your app, pass a function
